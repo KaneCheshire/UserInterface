@@ -22,3 +22,11 @@ public extension UILabel {
         return self
     }
 }
+
+public extension UITableView {
+
+    func with<Value>(_ keyPath: ReferenceWritableKeyPath<UITableView, Value>, as value: Value) -> Self {
+        self[keyPath: keyPath] = value
+        return self
+    }
+}
