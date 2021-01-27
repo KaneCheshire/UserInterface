@@ -13,15 +13,14 @@ let package = Package(
             targets: ["UserInterface"]),
     ],
     dependencies: [
-		.package(path: "../FoundationExtension"),
-		.package(path: "../Logging")
+        .package(url: "https://github.com/kanecheshire/FoundationExtension", .branch("main"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "UserInterface",
-			dependencies: ["FoundationExtension", "Logging"]),
+			dependencies: ["FoundationExtension"]),
         .testTarget(
             name: "UserInterfaceTests",
             dependencies: ["UserInterface"]),

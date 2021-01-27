@@ -1,8 +1,7 @@
 import UIKit
 import Combine
-import Logging
 
-open class BaseViewController: UIViewController, Logger {
+open class BaseViewController: UIViewController {
 
 	public var cancellables: Set<AnyCancellable> = []
 

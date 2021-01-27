@@ -1,8 +1,7 @@
 import UIKit
 import FoundationExtension
-import Logging
 
-public class IconButton: UIButton, Logger {
+public class IconButton: UIButton {
 
 	private var handler: Block!
 

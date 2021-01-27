@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FoundationExtension",
+        "repositoryURL": "https://github.com/kanecheshire/FoundationExtension",
+        "state": {
+          "branch": "main",
+          "revision": "1c485eedfa40ac92129b83eecc49521f025c3c9b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

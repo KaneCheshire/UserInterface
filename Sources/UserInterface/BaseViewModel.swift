@@ -1,8 +1,7 @@
 import Foundation
 import Combine
-import Logging
 
-open class BaseViewModel<State, NavRequest>: Logger {
+open class BaseViewModel<State, NavRequest> {
 
 	@Published public private(set) var state: State
 	@Published public private(set) var navRequest: NavRequest?
