@@ -9,7 +9,7 @@ import UIKit
 
 public extension UIView {
 
-    func with<Value>(_ keyPath: ReferenceWritableKeyPath<UIView, Value>, as value: Value) -> Self {
+    func with<Value>(_ keyPath: ReferenceWritableKeyPath<UIView, Value>, _ value: Value) -> Self {
         self[keyPath: keyPath] = value
         return self
     }
@@ -17,7 +17,7 @@ public extension UIView {
 
 public extension UILabel {
 
-    func with<Value>(_ keyPath: ReferenceWritableKeyPath<UILabel, Value>, as value: Value) -> Self {
+    func with<Value>(_ keyPath: ReferenceWritableKeyPath<UILabel, Value>, _ value: Value) -> Self {
         self[keyPath: keyPath] = value
         return self
     }
@@ -25,7 +25,7 @@ public extension UILabel {
 
 public extension UITableView {
 
-    func with<Value>(_ keyPath: ReferenceWritableKeyPath<UITableView, Value>, as value: Value) -> Self {
+    func with<Value>(_ keyPath: ReferenceWritableKeyPath<UITableView, Value>, _ value: Value) -> Self {
         self[keyPath: keyPath] = value
         return self
     }

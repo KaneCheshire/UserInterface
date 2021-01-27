@@ -11,8 +11,8 @@ open  class EmptyStateView: UIView {
 	public init(title: String, buttonTitle: String, onTap: @escaping Block) {
 		self.onTap = onTap
 		titleLabel = UILabel()
-            .with(\.font, as: .preferredFont(for: .title1))
-            .with(\.textAlignment, as: .center)
+            .with(\.font, .preferredFont(for: .title1))
+            .with(\.textAlignment, .center)
 		super.init(frame: .zero)
 		pin(subview: stack, insets: .paddingSmall)
 		button.setTitle(buttonTitle, for: .normal)
