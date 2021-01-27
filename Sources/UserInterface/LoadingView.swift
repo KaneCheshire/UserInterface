@@ -4,8 +4,12 @@ import FoundationExtension
 public final class LoadingView: UIView {
 
 	private let activityIndicator = UIActivityIndicatorView(style: .medium)
-	private let titleLabel = UILabel(.title1, textAlignment: .center)
-	private let messageLabel = UILabel(.body, textAlignment: .center)
+	private let titleLabel = UILabel()
+        .with(\.font, as: .preferredFont(for: .title1))
+        .with(\.textAlignment, as: .center)
+	private let messageLabel = UILabel()
+        .with(\.font, as: .preferredFont(for: .body))
+        .with(\.textAlignment, as: .center)
 	private lazy var stack: UIStackView = {
 		let stack = UIStackView(arrangedSubviews: [activityIndicator, titleLabel, messageLabel])
 		stack.alignment = .center

@@ -74,7 +74,9 @@ private extension RadioGroup {
 		init(_ title: String) {
 			super.init(frame: .zero)
 			let stack = UIStackView([
-				UILabel(.body, title, numberOfLines: 1),
+				UILabel()
+                    .with(\.font, as: .preferredFont(for: .body))
+                    .with(\.numberOfLines, as: 1),
 				selectionIndicator
 			], axis: .horizontal)
 			stack.isUserInteractionEnabled = false

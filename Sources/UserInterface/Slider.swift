@@ -82,7 +82,9 @@ public final class TitledSwitch: UIView {
 	}
 
 	public init(_ title: String? = nil, _ handler: @escaping Closure<Bool> = { _ in }) {
-		self.label = UILabel(.body, title, numberOfLines: 1)
+		self.label = UILabel()
+            .with(\.font, as: .preferredFont(for: .body))
+            .with(\.numberOfLines, as: 1)
 		self.toggle = Switch(handler)
 		super.init(frame: .zero)
 		let stack = UIStackView(

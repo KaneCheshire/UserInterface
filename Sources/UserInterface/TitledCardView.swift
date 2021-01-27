@@ -4,7 +4,9 @@ import FoundationExtension
 open class TitledCardView: CardView {
 
 	public init(title: String, _ content: UIView..., infoButtonHandler: Block? = nil) {
-		let titleLabel = UILabel(.title1, title, numberOfLines: 1)
+        let titleLabel = UILabel()
+            .with(\.font, as: .preferredFont(for: .title1))
+            .with(\.numberOfLines, as: 1)
 		let firstView: UIView
 		if let handler = infoButtonHandler {
 			firstView = UIStackView([
