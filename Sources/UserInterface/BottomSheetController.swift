@@ -100,8 +100,6 @@ open class BottomSheetController: BaseViewController {
 		content.view.scrollView?.panGestureRecognizer.require(toFail: panGesture)
 	}
 
-	required public init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-
 	private func on(panState: PanGesture.State) {
 		switch panState {
 		case let .panning(translation, _):
