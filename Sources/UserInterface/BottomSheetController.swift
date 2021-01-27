@@ -56,7 +56,7 @@ open class BottomSheetController: BaseViewController {
 
 	private let content: BottomSheetControllerContent
 	private lazy var panGesture = content.view.addPanGesture { [weak self] in self?.on(panState: $0) }
-	private lazy var container = UIView().with(\.translatesAutoresizingMaskIntoConstraints, false)
+    private lazy var container = UIView().with(\.translatesAutoresizingMaskIntoConstraints, as: false)
 	private lazy var collapsedHeightConstraint = container.heightAnchor.constraint(equalToConstant: content.peekHeight)
 	private lazy var collapsedBottomConstraint = container.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -content.collapsedHorizontalInsets / 2)
 	private lazy var collapsedWidthConstraint = container.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -content.collapsedHorizontalInsets * 2)

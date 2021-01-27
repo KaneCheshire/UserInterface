@@ -54,10 +54,3 @@ public extension UIView {
 	}
 }
 
-public extension UIView {
-
-	func with<Value>(_ keyPath: ReferenceWritableKeyPath<UIView, Value>, _ value: Value) -> Self {
-		self[keyPath: keyPath] = value
-		return self
-	}
-}
