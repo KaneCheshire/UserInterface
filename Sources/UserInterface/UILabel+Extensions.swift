@@ -19,13 +19,3 @@ public extension UILabel {
 		accessibilityTraits.formUnion(additionalA11yTraits)
 	}
 }
-
-public extension UIFont { // TODO: Move
-
-	static func preferredFont(for style: UIFont.TextStyle, with weight: UIFont.Weight) -> UIFont {
-		let description = UIFontDescriptor.preferredFontDescriptor(withTextStyle: style)
-		let font = UIFont.systemFont(ofSize: description.pointSize, weight: weight)
-		let metrics = UIFontMetrics(forTextStyle: style)
-		return metrics.scaledFont(for: font)
-	}
-}
