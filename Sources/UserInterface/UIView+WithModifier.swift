@@ -23,6 +23,14 @@ public extension UILabel {
     }
 }
 
+public extension UITextField {
+
+    func with<Value>(_ keyPath: ReferenceWritableKeyPath<UITextField, Value>, _ value: Value) -> Self {
+        self[keyPath: keyPath] = value
+        return self
+    }
+}
+
 public extension UITableView {
 
     func with<Value>(_ keyPath: ReferenceWritableKeyPath<UITableView, Value>, _ value: Value) -> Self {
